@@ -1,0 +1,47 @@
+{
+  "name": "@padcom/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/common.umd.js",
+  "module": "./dist/common.mjs",
+  "types": "./dist/types.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/common.umd.js",
+      "import": "./dist/common.mjs",
+      "types": "./dist/types.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "test": "vitest run --environment jsdom --root . --coverage",
+    "test:watch": "vitest watch --environment jsdom --root . --coverage",
+    "lint": "eslint './{components,lib}/**/*.{ts,vue}'",
+    "dev": "vite build -w",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@padcom/eslint-config-vue": "^0.5.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitest/coverage-v8": "^0.32.0",
+    "@vue/test-utils": "^2.4.0",
+    "@vue/tsconfig": "^0.4.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.44.0",
+    "jsdom": "^22.1.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "5.0.4",
+    "vite": "^4.3.9",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-dts": "^3.3.1",
+    "vite-plugin-html": "^3.2.0",
+    "vitest": "^0.33.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "packages/common"
+    },
+    {
+      "path": "packages/hello"
+    },
+    {
+      "path": "packages/world"
+    }
+  ]
+}

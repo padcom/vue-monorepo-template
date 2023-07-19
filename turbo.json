@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "lint": {},
+    "dev": {
+      "outputs": [
+        "dist/**"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": [
+        "lint",
+        "build"
+      ]
+    }
+  },
+  "globalDependencies": [
+    "turbo.json",
+    "vite.default.js",
+    "package.json",
+    "package-lock.json"
+  ]
+}

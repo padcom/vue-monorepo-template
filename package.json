@@ -1,0 +1,29 @@
+{
+  "eslintConfig": {
+    "extends": [
+      "@padcom/eslint-config-vue"
+    ]
+  },
+  "scripts": {
+    "start": "turbo dev",
+    "test": "turbo test",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "clean": "git clean -xdf"
+  },
+  "workspaces": [
+    "packages/common",
+    "packages/hello",
+    "packages/world"
+  ],
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.9",
+    "typescript": "5.0.4",
+    "wait-on": "^7.0.1"
+  }
+}
