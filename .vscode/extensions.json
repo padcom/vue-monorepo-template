@@ -7,6 +7,7 @@
     "vue.volar",
     "cpylua.language-postcss",
     "csstools.postcss",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "vunguyentuan.vscode-css-variables"
   ]
 }
