@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "*.css": "tailwindcss"
+      "**/dist/**/*.css": "css",
+      "*.css": "postcss",
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": true
