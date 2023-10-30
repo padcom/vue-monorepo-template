@@ -17,8 +17,8 @@ export default {
     typography(),
   ],
   future: {
-    disableColorOpacityUtilitiesByDefault: true,
-    respectDefaultRingColorOpacity: true,
+    // disableColorOpacityUtilitiesByDefault: true,
+    // respectDefaultRingColorOpacity: true,
   },
   experimental: {
     optimizeUniversalDefaults: true,
