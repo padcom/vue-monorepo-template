@@ -1,2 +1,4 @@
-@import "./tailwind.css";
+@import "@padcom/nano-css-reset";
+
 @import "@padcom/common/dist/style.css";
+@import "./tailwind.css";

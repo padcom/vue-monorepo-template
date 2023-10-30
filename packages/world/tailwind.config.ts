@@ -7,16 +7,20 @@ import theme from './tailwind.theme'
 export default {
   theme,
   content: [
+    'index.html',
     './src/**/*.{css,vue}',
   ],
+  corePlugins: {
+    preflight: false,
+  },
   plugins: [
     typography(),
   ],
   future: {
-    // disableColorOpacityUtilitiesByDefault: true,
-    // respectDefaultRingColorOpacity: true,
+    disableColorOpacityUtilitiesByDefault: true,
+    respectDefaultRingColorOpacity: true,
   },
   experimental: {
-    // optimizeUniversalDefaults: true,
+    optimizeUniversalDefaults: true,
   },
 } as Config

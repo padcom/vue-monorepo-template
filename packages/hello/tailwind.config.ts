@@ -9,6 +9,9 @@ export default {
   content: [
     './src/**/*.{css,vue}',
   ],
+  corePlugins: {
+    preflight: false,
+  },
   plugins: [
     typography(),
   ],
@@ -17,6 +20,6 @@ export default {
     // respectDefaultRingColorOpacity: true,
   },
   experimental: {
-    // optimizeUniversalDefaults: true,
+    optimizeUniversalDefaults: true,
   },
 } as Config
