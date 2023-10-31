@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 
 import { viteLibConfig } from '../../vite.default'
 import pkg from './package.json'

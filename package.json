@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "turbo": "^1.10.9",
-    "typescript": "5.0.4",
+    "typescript": ">= 3.3.0 < 5.1.0",
     "wait-on": "^7.0.1"
   }
 }
