@@ -27,6 +27,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^1.4.0",
     "@padcom/eslint-config-vue": "^0.5.1",
     "@padcom/nano-css-reset": "^0.0.1",
     "@tailwindcss/typography": "^0.5.9",
@@ -44,6 +45,7 @@
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-html": "^3.2.0",
     "vite-svg-loader": "^4.0.0",
-    "vitest": "^0.33.0"
+    "vitest": "^0.33.0",
+    "vue-i18n": "^9.6.2"
   }
 }

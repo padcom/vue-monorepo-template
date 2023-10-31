@@ -4,8 +4,9 @@
 /* eslint-disable jsdoc/valid-types */
 /* eslint-disable complexity */
 import path from 'node:path'
-import vue from '@vitejs/plugin-vue'
 import svg from 'vite-svg-loader'
+import vue from '@vitejs/plugin-vue'
+import i18n from '@intlify/unplugin-vue-i18n/vite'
 import eslint from 'vite-plugin-eslint'
 import dts from 'vite-plugin-dts'
 import nesting from 'tailwindcss/nesting'
@@ -18,6 +19,9 @@ export const viteVueDefaults = (
 ) => () => ({
   ...config,
   plugins: [
+    svg({
+      defaultImport: 'component',
+    }),
     vue({
       template: {
         compilerOptions: {
@@ -25,9 +29,7 @@ export const viteVueDefaults = (
         },
       },
     }),
-    svg({
-      defaultImport: 'component',
-    }),
+    i18n(),
     eslint({
       lintOnStart: false,
     }),
