@@ -5,9 +5,9 @@
     ]
   },
   "scripts": {
-    "start": "turbo dev",
+    "start": "turbo dev --no-cache",
     "test": "turbo test",
-    "dev": "turbo dev",
+    "dev": "turbo dev --no-cache",
     "build": "turbo build",
     "lint": "turbo lint",
     "clean": "git clean -xdf"
