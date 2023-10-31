@@ -1,12 +1,13 @@
 /* eslint-env node */
+/* eslint-disable max-lines-per-function */
 /* eslint-disable no-extra-parens */
 /* eslint-disable jsdoc/valid-types */
 /* eslint-disable complexity */
 import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
+import svg from 'vite-svg-loader'
 import eslint from 'vite-plugin-eslint'
 import dts from 'vite-plugin-dts'
-import { createHtmlPlugin as html } from 'vite-plugin-html'
 import nesting from 'tailwindcss/nesting'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
@@ -17,8 +18,19 @@ export const viteVueDefaults = (
 ) => () => ({
   ...config,
   plugins: [
-    vue(),
-    eslint(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag.includes('-'),
+        },
+      },
+    }),
+    svg({
+      defaultImport: 'component',
+    }),
+    eslint({
+      lintOnStart: false,
+    }),
     ...(config?.plugins || []),
   ],
   css: {
@@ -51,7 +63,6 @@ export const viteAppConfig = (
 ) => context => viteVueDefaults({
   ...config,
   plugins: [
-    html({ inject: { data: { mode: context?.mode, ...process.env, ...packageJson } } }),
     ...(config?.plugins || []),
   ],
   resolve: {
