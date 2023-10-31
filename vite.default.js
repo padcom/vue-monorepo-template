@@ -74,6 +74,11 @@ export const viteAppConfig = (
       ...(config?.resolve?.alias || []),
     },
   },
+  test: {
+    setupFiles: [
+      '../vitest.setup.js',
+    ],
+  },
 })(context)
 
 export const viteLibConfig = (
@@ -102,5 +107,10 @@ export const viteLibConfig = (
         ...(config?.build?.rollupOptions?.external || []),
       ],
     },
+  },
+  test: {
+    setupFiles: [
+      './vitest.setup.js',
+    ],
   },
 })(context)
