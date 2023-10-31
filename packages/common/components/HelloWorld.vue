@@ -1,15 +1,15 @@
 <template>
-  <h1 class="my-4">Hello, world! {{ message }}</h1>
+  <h1>Hello, world! {{ message }}</h1>
 </template>
 
 <script lang="ts" setup>
 defineProps({
-  message: { type: String, default: 'Hello, world! from HelloWorld.vue' },
+  message: { type: String, default: 'from HelloWorld.vue' },
 })
 </script>
 
 <style lang="postcss" scoped>
 h1 {
-  @apply text-lg;
+  @apply text-3xl;
 }
 </style>
