@@ -11,14 +11,15 @@ export default {
     './src/**/*.{css,vue}',
   ],
   corePlugins: {
+    // Comment out the next line if you want to use CSS reset from tailwind
     preflight: false,
   },
   plugins: [
     typography(),
   ],
   future: {
+    // Uncomment the next line if you don't want generation of --tw-*-opacity variables
     // disableColorOpacityUtilitiesByDefault: true,
-    // respectDefaultRingColorOpacity: true,
   },
   experimental: {
     optimizeUniversalDefaults: true,
